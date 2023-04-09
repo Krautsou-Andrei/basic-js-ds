@@ -47,23 +47,6 @@ function removeKFromList(l, k) {
   return l;
 }
 
-// function convertArrayToList(arr) {
-//   return arr.reverse().reduce((acc, cur) => {
-//     if (acc) {
-//       const node = new ListNode(cur);
-//       node.next = acc;
-//       return node;
-//     }
-
-//     return new ListNode(cur);
-//   }, null);
-// }
-
-// const initial = convertArrayToList([3, 1, 2, 3, 4, 5]);
-// console.log(convertArrayToList([3, 1, 2, 3, 4, 5]));
-// const expected = convertArrayToList([1, 2, 4, 5]);
-// removeKFromList(initial, 3);
-
 module.exports = {
   removeKFromList,
 };
