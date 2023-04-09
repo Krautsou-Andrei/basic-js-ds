@@ -84,6 +84,7 @@ class BinarySearchTree {
   constructor() {
     this.tree = new Tree();
   }
+
   root() {
     if (this.tree.node === null || this.tree.node.data === null || this.tree.node.data === undefined) {
       return null;
