@@ -17,8 +17,6 @@ const { ListNode } = require("../extensions/list-node.js");
 class Queue {
   constructor() {
     this.head = null;
-    this.length = 0;
-    this.list = [];
   }
 
   getUnderlyingList() {
@@ -26,7 +24,7 @@ class Queue {
   }
 
   enqueue(value) {
-    if (this.length === 0) {
+    if (this.head === null) {
       this.head = new ListNode(value);
     } else {
       let current = this.head;
@@ -37,8 +35,6 @@ class Queue {
 
       current.next = new ListNode(value);
     }
-
-    this.length++;
   }
 
   dequeue() {
@@ -46,7 +42,6 @@ class Queue {
 
     this.head = current.next;
 
-    this.length--;
     return current.value;
   }
 }
